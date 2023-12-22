@@ -1,0 +1,28 @@
+#background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden; /* Adicionado para garantir que o vídeo não ultrapasse as bordas */
+}
+
+#background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#background::after {
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+#app {
+    position: fixed;
+    top: 10px; /* Ajuste conforme necessário para a posição vertical da logo */
+    left: 10px; /* Ajuste conforme necessário para a posição horizontal da logo */
+    z-index: 1; /* Certifica-se de que a logo fique acima do vídeo */
+}
